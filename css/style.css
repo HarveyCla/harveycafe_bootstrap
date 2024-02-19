@@ -1,179 +1,254 @@
-:root {
-  --primary-color: #bc6c25;
-  /* --section-bg-color: #da; */
-  --link-hover-color: #e76f51;
-  --btn-color: #bc6c25;
-  --section-bg-color: #4D3822;
-}
-@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+:root{
+    --primary-color:#bc6c25;
+    --secondary-color:#4d3822;
+    --hover-color:#e76f51;
+    --section-color:#B78752;
 
-* {
-  font-family: "Plus Jakarta Sans", sans-serif !important;
 }
 
-/*! -------------- 1- NAVBAR --------------------- */
+
+
+
+*{
+    font-family: "Plus Jakarta Sans", sans-serif;
+    
+}
+
+/*! NAVBAR */
+
 .navbar{
     background-color: transparent !important;
     position: fixed;
-    top: 0;
-    z-index: 3;
+    z-index: 5;
     width: 100%;
 }
+
 .navbar .container{
-    background-color: rgba(0, 0, 0, 0.584) !important; 
-}
-.navbar-nav {
-  font-size: 1.3rem;
-  text-transform: capitalize;
-  font-weight: 600;
-  
+    background-color: rgba(0, 0, 0, 0.7) !important;
 }
 
-.navbar .nav-link, .navbar .active{
-    color: white !important;
+
+
+.navbar-nav{
+    font-size: 1.3rem;
+    text-transform: capitalize;
+    text-transform: capitalize;
+    font-weight: bold;
 }
 
-.navbar .nav-link:hover {
-  color: var(--link-hover-color) !important;
+ .nav-link{
+    color:  white !important;
+}
+ .nav-link:hover{
+    color: var(--primary-color) !important;
 }
 
-/*! -------------- 2- CAROUSEL ------------------- */
+/*! CAROUSEL */
 
-.carousel-item {
-  min-height: 60vh;
-  height: calc(100vh);
-  /* height: 100vh; */
-  /* position: absolute; */
+.carousel-item{
+    /* border: 5px solid red; */
+    /* height: calc(100vh - 135px); */
+    height: 100vh;
 }
 
-.carousel-item img {
-  height: 100%;
-  object-fit: cover;
+.carousel-item img{
+    height: 100%;
+    object-fit: cover;
 }
 
-.carousel-caption .btn {
-  width: 10rem;
-  padding: 10px;
-  background-color: var(--btn-color);
-  white-space: nowrap;
-  border: none;
-  font-weight: bold;
+
+.carousel-caption{
+    /* border: 5px solid blue !important; */
+
+    bottom: 40%;
+    
 }
+
+.carousel-caption .btn{
+    background-color: #bc6c25;
+    border:none;
+    width: 10rem;
+    white-space: nowrap;
+    color: white;
+    font-weight: bold;
+
+}
+
 .carousel-caption .btn:first-child{
     background-color: transparent;
 }
-
-.carousel-caption {
-  /* border: 2px solid red; */
-  /* margin-bottom: 10rem; */
-  /* top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); */
-
-  bottom: 40%;
-  font-size: 1.2rem;
+.carousel-caption .btn:first-child:hover{
+    background-color: white;
+    color: black;
 }
 
-
-.brand {
-  position: relative;
-  z-index: 3;
+.hero{
+    position: relative;
+    z-index: 3;
 }
 
-.carousel-indicators {
-  gap: 0.7rem !important;
-  /* border: 5px solid red; */
-
-  bottom: 10%;
-}
-.carousel-indicators button {
-  background-color: var(--primary-color) !important;
-  padding: 0.1rem !important;
-  width: 3rem !important;
-}
-
-.black {
-  width: 350px;
-  height: 400px;
-  background-color: rgba(0, 0, 0, 0.584);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(40deg);
-  z-index: 2;
-}
-
-.carousel-caption h1{
-    font-size: 5rem;
-    font-weight: 900;
-}
-
-/*! -------------- 3- ABOUT SECTION -------------- */
-section#about{
-    /* height: 100vh; */
-    background-color: var(--section-bg-color) !important;
-}
-
-section#about .image-container{
-    position: relative; 
-    /* max-width: 700px; */
-    display: flex;
-    justify-content: center;
-     
-    max-width: 700px;
-}
-section#about .image-container img{
-    width: 100%;
-    /* border: 5px solid red; */
-    /* max-height: 1000px;   */
-    /* max-width: 1200px;  */
-}
-
-
-.about-image-info {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgba(188, 108, 37, 1));
-    border-radius: var(--border-radius-medium);
-    bottom: 0;
-    left: 0;
-    height: auto;
-    padding: 40px;
+.black{
+    width: 350px;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.809);
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(40deg);
+    z-index: 2;
+    
+}
+
+.carousel-indicators{
+  /* display: flex;   */
+
+  gap: 0.7rem !important;
+}
+
+.carousel-indicators button{
+    background-color: var(--primary-color) !important;
+    padding: 0.1rem !important;
+    width: 3rem !important;
+}
+/*! ABOUT */
+section#about{
+    
+    background-color: var(--secondary-color);
+}
+
+.image-container{
+    /* border: 2px solid red; */
+    position: relative;
+
+}
+.image-container img{
+    width: 100%;
+
+}
+
+
+.about-image-info{
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.509),
+        rgba(188, 108, 37, 1)
+    );
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-  }
+}
+
+section#about button{
+    background-color: var(--primary-color);
+    border: none;
+}
+
+/*! POPLE */
 
 
+section#people{
+    background-color:var(--section-color) !important ;
+}
+section#people .container{
+    background-color:var(--secondary-color) !important ;
+}
+
+section#people .card{
+    background-color: var(--primary-color);
+    transition: all .5s;
+    overflow: hidden;
+}
+section#people .card img{
+    transition: all .5s;
+}
+
+section#people .card img:hover{
+    transform: scale(1.05);
+
+}
+
+section#people .card:hover {
+    transform: scale(1.05);
+}
+
+section#people i {
+    transition: all 0.5s;
+}
+
+section#people i:hover {
+    opacity: .8;
+
+}
+
+/*! MENU */
+
+section#menu{
+    background-color: #4d3822;
+    color: black !important;
+}
+section#menu button{
+    background-color:#4d3822;
+    color: var(--primary-color) !important;
+    margin-right: 1rem;
+}
+section#menu  .container{
+    
+    background-color: #bc6c25;
+    border: none;
+}
+section#menu  .row{
+    
+    /* height: 500px; */
+    /* align-items: center; */
+}
+
+.menu-header{
+    color: var(--primary-color);
+}
+
+section#menu .nav-pills{
+    font-size: 1.2rem;
+}
+
+/*! Contact */
+
+section#contact{
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.509),
+        rgba(188, 108, 37, 1)
+    ),url(../img/slider2.jpg);
+}
+
+input, textarea {
+    background-color: inherit !important;
+    resize: none;
+}
+
+input:focus, textarea:focus ,textarea label:focus{
+    background-color:var(--primary-color) !important;
+
+}
+
+input::placeholder{
+    color: white !important;
+}
+
+label{
+    font-style: italic;
+    color: white;
+}
+
+.google-map{
+    filter: grayscale(100);
+    border-radius: 20px;
+}
 
 
+/*! Footer */
 
-
-
-/*! -------------- 4- INSTRUCTORS ---------------- */
-
-/*! -------------- 4- STUDENTS SECTION ----------- */
-
-/*! -------------- 5- COURSES SECTION ------------ */
-
-/*! -------------- 6- CONTACT SECTION ------------ */
-
-/*! -------------- 7- FOOTER --------------------- */
-
-/*! -------------- 8- BUTTON --------------------- */
-
-/*! -------------- 1- NAVBAR --------------------- */
-
-/*! -------------- 2- CAROUSEL ------------------- */
-
-/*! -------------- 3- ABOUT SECTION -------------- */
-
-/*! -------------- 4- INSTRUCTORS ---------------- */
-
-/*! -------------- 4- STUDENTS SECTION ----------- */
-
-/*! -------------- 5- COURSES SECTION ------------ */
-
-/*! -------------- 6- CONTACT SECTION ------------ */
-
-/*! -------------- 7- FOOTER --------------------- */
-
-/*! -------------- 8- BUTTON --------------------- */
+footer{
+    background-color: var(--primary-color);
+}
